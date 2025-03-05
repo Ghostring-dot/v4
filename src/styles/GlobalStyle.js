@@ -442,7 +442,24 @@ const GlobalStyle = createGlobalStyle`
   .gatsby-image-outer-wrapper {
     height: 100%;
   }
-
+	.inner {
+		display: flex;       /* Arrange items horizontally */
+		align-items: center; /* Align items vertically */
+		justify-content: space-between; /* Ensures even spacing */
+		gap: 40px;           /* Space between text and image */
+		   }
+		   
+	.StyledText {
+		flex: 1;            /* Let text take available space */
+		max-width: 55%;     /* Prevent text from taking full width */
+				}
+				
+	.StyledPic {
+		flex-shrink: 0;     /* Prevents image from shrinking */
+		max-width: 40%;     /* Adjust image width */
+		text-align: center; /* Ensures the image is centered in its section */
+			   }
+			   
   ${TransitionStyles};
 
   ${PrismStyles};
